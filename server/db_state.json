@@ -1,0 +1,36 @@
+{
+  "bano": {
+    "rgbColor": "#1e293b",
+    "mode": "OFF",
+    "state": "OFF"
+  },
+  "cocina": {
+    "lights": true,
+    "stove": false,
+    "fan": false,
+    "fridge": true,
+    "nevera": true,
+    "fireAlert": false,
+    "gasLevel": 71,
+    "gasAlert": false,
+    "temp": 24,
+    "humidity": 0
+  },
+  "sala": {
+    "tv": false,
+    "piano": false,
+    "game": false,
+    "gameScore": 0
+  },
+  "habitacion": {
+    "lights": true,
+    "blinds": 100,
+    "temp": 24,
+    "humidity": 0
+  },
+  "garaje": {
+    "door": "OPEN",
+    "distance": 15,
+    "autoCloseActive": false
+  }
+}

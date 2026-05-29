@@ -1,0 +1,902 @@
+[
+  {
+    "id": "tz3zs49",
+    "timestamp": "2026-05-29T21:36:05.286Z",
+    "command": " hijo de puta",
+    "intent": "UNKNOWN",
+    "module": "general",
+    "status": "success",
+    "response": "Comando Serial: null"
+  },
+  {
+    "id": "ri24ez6",
+    "timestamp": "2026-05-29T21:35:58.537Z",
+    "command": "qué quieres que haga para detectar el carro",
+    "intent": "UNKNOWN",
+    "module": "general",
+    "status": "success",
+    "response": "Comando Serial: null"
+  },
+  {
+    "id": "116s2mp",
+    "timestamp": "2026-05-29T21:35:37.605Z",
+    "command": " dice detección el celular Abre una página web con su cámara",
+    "intent": "UNKNOWN",
+    "module": "general",
+    "status": "success",
+    "response": "Comando Serial: null"
+  },
+  {
+    "id": "tp6vzys",
+    "timestamp": "2026-05-29T21:35:26.696Z",
+    "command": " buena idea para cerrar el proyecto de sección del carro con la cámara del celular",
+    "intent": "UNKNOWN",
+    "module": "general",
+    "status": "success",
+    "response": "Comando Serial: null"
+  },
+  {
+    "id": "9tp0gfu",
+    "timestamp": "2026-05-29T21:34:41.979Z",
+    "command": " en el garaje",
+    "intent": "UNKNOWN",
+    "module": "general",
+    "status": "success",
+    "response": "Comando Serial: null"
+  },
+  {
+    "id": "8se17g9",
+    "timestamp": "2026-05-29T21:34:35.805Z",
+    "command": " que o que el carro",
+    "intent": "UNKNOWN",
+    "module": "general",
+    "status": "success",
+    "response": "Comando Serial: null"
+  },
+  {
+    "id": "88h3a8n",
+    "timestamp": "2026-05-29T21:34:33.396Z",
+    "command": " yo es que yo yo utilicé la cámara de mi celular para reconocer",
+    "intent": "UNKNOWN",
+    "module": "general",
+    "status": "success",
+    "response": "Comando Serial: null"
+  },
+  {
+    "id": "mz259o2",
+    "timestamp": "2026-05-29T21:34:16.992Z",
+    "command": " Yolo con la idea es que",
+    "intent": "UNKNOWN",
+    "module": "general",
+    "status": "success",
+    "response": "Comando Serial: null"
+  },
+  {
+    "id": "09m5jt3",
+    "timestamp": "2026-05-29T21:34:10.191Z",
+    "command": " proyecto Necesito instalar",
+    "intent": "UNKNOWN",
+    "module": "general",
+    "status": "success",
+    "response": "Comando Serial: null"
+  },
+  {
+    "id": "1ndi3v4",
+    "timestamp": "2026-05-29T21:34:03.292Z",
+    "command": " ahora necesito una última cosa",
+    "intent": "UNKNOWN",
+    "module": "general",
+    "status": "success",
+    "response": "Comando Serial: null"
+  },
+  {
+    "id": "g9cezea",
+    "timestamp": "2026-05-29T21:33:53.984Z",
+    "command": " ahora el problema",
+    "intent": "UNKNOWN",
+    "module": "general",
+    "status": "success",
+    "response": "Comando Serial: null"
+  },
+  {
+    "id": "xfvt7we",
+    "timestamp": "2026-05-29T21:33:48.095Z",
+    "command": " bueno",
+    "intent": "UNKNOWN",
+    "module": "general",
+    "status": "success",
+    "response": "Comando Serial: null"
+  },
+  {
+    "id": "ab90awf",
+    "timestamp": "2026-05-29T21:33:35.007Z",
+    "command": " Listo ya quedó todo ya quedó",
+    "intent": "UNKNOWN",
+    "module": "general",
+    "status": "success",
+    "response": "Comando Serial: null"
+  },
+  {
+    "id": "y738bed",
+    "timestamp": "2026-05-29T21:33:24.179Z",
+    "command": " Entonces no le entendí",
+    "intent": "UNKNOWN",
+    "module": "general",
+    "status": "success",
+    "response": "Comando Serial: null"
+  },
+  {
+    "id": "lbsnwkk",
+    "timestamp": "2026-05-29T21:33:15.983Z",
+    "command": " era negra y cocina que era",
+    "intent": "UNKNOWN",
+    "module": "general",
+    "status": "success",
+    "response": "Comando Serial: null"
+  },
+  {
+    "id": "lm4uejf",
+    "timestamp": "2026-05-29T21:33:07.196Z",
+    "command": " cocina",
+    "intent": "ENCENDER_LUZ_COCINA",
+    "module": "cocina",
+    "status": "success",
+    "response": "Comando Serial: cocina"
+  },
+  {
+    "id": "yvdalbu",
+    "timestamp": "2026-05-29T21:33:02.591Z",
+    "command": " Miguel yo no lo puedo creer que era eso",
+    "intent": "UNKNOWN",
+    "module": "general",
+    "status": "success",
+    "response": "Comando Serial: null"
+  },
+  {
+    "id": "j3t4ewo",
+    "timestamp": "2026-05-29T21:32:52.191Z",
+    "command": " abrir persiana",
+    "intent": "ABRIR_PERSIANA",
+    "module": "habitacion",
+    "status": "success",
+    "response": "Comando Serial: ABRIR_PERSIANA"
+  },
+  {
+    "id": "lrv474z",
+    "timestamp": "2026-05-29T21:32:47.892Z",
+    "command": " abrir persiana",
+    "intent": "ABRIR_PERSIANA",
+    "module": "habitacion",
+    "status": "success",
+    "response": "Comando Serial: ABRIR_PERSIANA"
+  },
+  {
+    "id": "0k10if3",
+    "timestamp": "2026-05-29T21:32:43.293Z",
+    "command": " abrir persiana",
+    "intent": "ABRIR_PERSIANA",
+    "module": "habitacion",
+    "status": "success",
+    "response": "Comando Serial: ABRIR_PERSIANA"
+  },
+  {
+    "id": "lhjft3r",
+    "timestamp": "2026-05-29T21:32:38.886Z",
+    "command": " abrir persiana",
+    "intent": "ABRIR_PERSIANA",
+    "module": "habitacion",
+    "status": "success",
+    "response": "Comando Serial: ABRIR_PERSIANA"
+  },
+  {
+    "id": "ppgsqn7",
+    "timestamp": "2026-05-29T21:32:34.592Z",
+    "command": " cerrar persiana",
+    "intent": "CERRAR_PERSIANA",
+    "module": "habitacion",
+    "status": "success",
+    "response": "Comando Serial: CERRAR_PERSIANA"
+  },
+  {
+    "id": "ogsw09p",
+    "timestamp": "2026-05-29T21:32:29.719Z",
+    "command": " Ay yo no me lo puedo estar creyendo que era esa pendeja cerrar ventana",
+    "intent": "CERRAR_PERSIANA",
+    "module": "habitacion",
+    "status": "success",
+    "response": "Comando Serial: CERRAR_PERSIANA"
+  },
+  {
+    "id": "td8ax23",
+    "timestamp": "2026-05-29T21:32:22.598Z",
+    "command": "nevera",
+    "intent": "ENCENDER_NEVERA",
+    "module": "cocina",
+    "status": "success",
+    "response": "Comando Serial: nevera"
+  },
+  {
+    "id": "x8o0e03",
+    "timestamp": "2026-05-29T21:30:46.124Z",
+    "command": "chistoso",
+    "intent": "UNKNOWN",
+    "module": "general",
+    "status": "success",
+    "response": "Comando Serial: null"
+  },
+  {
+    "id": "latu9i4",
+    "timestamp": "2026-05-29T21:30:06.912Z",
+    "command": " una oración",
+    "intent": "UNKNOWN",
+    "module": "general",
+    "status": "success",
+    "response": "Comando Serial: null"
+  },
+  {
+    "id": "ku484i4",
+    "timestamp": "2026-05-29T21:29:57.209Z",
+    "command": "bañado",
+    "intent": "UNKNOWN",
+    "module": "general",
+    "status": "success",
+    "response": "Comando Serial: null"
+  },
+  {
+    "id": "txiwy37",
+    "timestamp": "2026-05-29T21:28:56.708Z",
+    "command": "cerrar ventana esa frase no existe cerrar persiana",
+    "intent": "CERRAR_PERSIANA",
+    "module": "habitacion",
+    "status": "success",
+    "response": "Comando Serial: CERRAR_PERSIANA"
+  },
+  {
+    "id": "1do0dwg",
+    "timestamp": "2026-05-29T21:28:12.208Z",
+    "command": " abrir persiana",
+    "intent": "ABRIR_PERSIANA",
+    "module": "habitacion",
+    "status": "success",
+    "response": "Comando Serial: ABRIR_PERSIANA"
+  },
+  {
+    "id": "mqc1dib",
+    "timestamp": "2026-05-29T21:28:07.618Z",
+    "command": " cerrar persiana",
+    "intent": "CERRAR_PERSIANA",
+    "module": "habitacion",
+    "status": "success",
+    "response": "Comando Serial: CERRAR_PERSIANA"
+  },
+  {
+    "id": "9xq5dcm",
+    "timestamp": "2026-05-29T21:28:03.018Z",
+    "command": " abrir persiana",
+    "intent": "ABRIR_PERSIANA",
+    "module": "habitacion",
+    "status": "success",
+    "response": "Comando Serial: ABRIR_PERSIANA"
+  },
+  {
+    "id": "2gljn64",
+    "timestamp": "2026-05-29T21:27:49.626Z",
+    "command": " cuando digo que contigo",
+    "intent": "UNKNOWN",
+    "module": "general",
+    "status": "success",
+    "response": "Comando Serial: null"
+  },
+  {
+    "id": "1k3u2xm",
+    "timestamp": "2026-05-29T21:27:37.917Z",
+    "command": " ozuna no funciona",
+    "intent": "UNKNOWN",
+    "module": "general",
+    "status": "success",
+    "response": "Comando Serial: null"
+  },
+  {
+    "id": "pd7ay8z",
+    "timestamp": "2026-05-29T21:27:32.823Z",
+    "command": "ya está conectado pero cuando digo nevera",
+    "intent": "UNKNOWN",
+    "module": "general",
+    "status": "success",
+    "response": "Comando Serial: null"
+  },
+  {
+    "id": "wiecto7",
+    "timestamp": "2026-05-29T21:27:23.736Z",
+    "command": "[ALERTA] ¡Fuga de gas detectada!: 837 ppm",
+    "intent": "GAS_ALERT",
+    "module": "cocina",
+    "status": "danger",
+    "response": "BUZZER_ON"
+  },
+  {
+    "id": "5pblio0",
+    "timestamp": "2026-05-29T21:27:11.546Z",
+    "command": " nevera",
+    "intent": "ENCENDER_NEVERA",
+    "module": "cocina",
+    "status": "success",
+    "response": "Comando Serial: nevera"
+  },
+  {
+    "id": "uciaax7",
+    "timestamp": "2026-05-29T21:27:07.723Z",
+    "command": " era nevera nevera",
+    "intent": "UNKNOWN",
+    "module": "general",
+    "status": "success",
+    "response": "Comando Serial: null"
+  },
+  {
+    "id": "15bmpt9",
+    "timestamp": "2026-05-29T21:27:00.715Z",
+    "command": " abrir ventana comer a Miguel no ves que no le va a abrir ventana cierto",
+    "intent": "UNKNOWN",
+    "module": "general",
+    "status": "success",
+    "response": "Comando Serial: null"
+  },
+  {
+    "id": "3vpn7ce",
+    "timestamp": "2026-05-29T21:26:49.832Z",
+    "command": "abrir ventana",
+    "intent": "UNKNOWN",
+    "module": "general",
+    "status": "success",
+    "response": "Comando Serial: null"
+  },
+  {
+    "id": "icj3abg",
+    "timestamp": "2026-05-29T21:21:52.190Z",
+    "command": "subir persiana",
+    "intent": "ABRIR_PERSIANA",
+    "module": "habitacion",
+    "status": "success",
+    "response": "Comando Serial: ABRIR_PERSIANA"
+  },
+  {
+    "id": "ftdw0al",
+    "timestamp": "2026-05-29T21:21:51.586Z",
+    "command": "encender nevera",
+    "intent": "ENCENDER_NEVERA",
+    "module": "cocina",
+    "status": "success",
+    "response": "Comando Serial: nevera"
+  },
+  {
+    "id": "5p1k9t7",
+    "timestamp": "2026-05-29T21:20:47.414Z",
+    "command": " donde uno enciende",
+    "intent": "UNKNOWN",
+    "module": "general",
+    "status": "success",
+    "response": "Comando Serial: null"
+  },
+  {
+    "id": "rc1uwqb",
+    "timestamp": "2026-05-29T21:20:42.326Z",
+    "command": " nevera cocina",
+    "intent": "UNKNOWN",
+    "module": "general",
+    "status": "success",
+    "response": "Comando Serial: null"
+  },
+  {
+    "id": "6bljyli",
+    "timestamp": "2026-05-29T21:20:34.931Z",
+    "command": " no cierra y Abre La persiana tampoco me prende o aprende o cambia los modos de nevera",
+    "intent": "UNKNOWN",
+    "module": "general",
+    "status": "success",
+    "response": "Comando Serial: null"
+  },
+  {
+    "id": "llokg6f",
+    "timestamp": "2026-05-29T21:20:17.443Z",
+    "command": " el comando de voz no está funcionando",
+    "intent": "UNKNOWN",
+    "module": "general",
+    "status": "success",
+    "response": "Comando Serial: null"
+  },
+  {
+    "id": "x46pnrt",
+    "timestamp": "2026-05-29T21:20:04.177Z",
+    "command": "[CLICK] blinds -> 0",
+    "intent": "Manual: blinds_0",
+    "module": "habitacion",
+    "status": "success",
+    "response": "Comando Serial: CERRAR_PERSIANA"
+  },
+  {
+    "id": "0g1gfic",
+    "timestamp": "2026-05-29T21:20:03.955Z",
+    "command": "[CLICK] blinds -> 0",
+    "intent": "Manual: blinds_0",
+    "module": "habitacion",
+    "status": "success",
+    "response": "Comando Serial: CERRAR_PERSIANA"
+  },
+  {
+    "id": "yoskct8",
+    "timestamp": "2026-05-29T21:20:03.789Z",
+    "command": "[CLICK] blinds -> 0",
+    "intent": "Manual: blinds_0",
+    "module": "habitacion",
+    "status": "success",
+    "response": "Comando Serial: CERRAR_PERSIANA"
+  },
+  {
+    "id": "ms0h1gz",
+    "timestamp": "2026-05-29T21:20:03.615Z",
+    "command": "[CLICK] blinds -> 0",
+    "intent": "Manual: blinds_0",
+    "module": "habitacion",
+    "status": "success",
+    "response": "Comando Serial: CERRAR_PERSIANA"
+  },
+  {
+    "id": "m1v69ju",
+    "timestamp": "2026-05-29T21:20:03.442Z",
+    "command": "[CLICK] blinds -> 0",
+    "intent": "Manual: blinds_0",
+    "module": "habitacion",
+    "status": "success",
+    "response": "Comando Serial: CERRAR_PERSIANA"
+  },
+  {
+    "id": "7z21zcf",
+    "timestamp": "2026-05-29T21:20:03.089Z",
+    "command": "[CLICK] blinds -> 0",
+    "intent": "Manual: blinds_0",
+    "module": "habitacion",
+    "status": "success",
+    "response": "Comando Serial: CERRAR_PERSIANA"
+  },
+  {
+    "id": "lrhr85v",
+    "timestamp": "2026-05-29T21:20:01.268Z",
+    "command": "[CLICK] blinds -> 100",
+    "intent": "Manual: blinds_100",
+    "module": "habitacion",
+    "status": "success",
+    "response": "Comando Serial: ABRIR_PERSIANA"
+  },
+  {
+    "id": "akmekv2",
+    "timestamp": "2026-05-29T21:19:53.260Z",
+    "command": " zanahoria ni mierda cerrar persiana",
+    "intent": "CERRAR_PERSIANA",
+    "module": "habitacion",
+    "status": "success",
+    "response": "Comando Serial: CERRAR_PERSIANA"
+  },
+  {
+    "id": "1vgqkjm",
+    "timestamp": "2026-05-29T21:19:46.317Z",
+    "command": " abrir abrir persiana",
+    "intent": "ABRIR_PERSIANA",
+    "module": "habitacion",
+    "status": "success",
+    "response": "Comando Serial: ABRIR_PERSIANA"
+  },
+  {
+    "id": "c7kosiz",
+    "timestamp": "2026-05-29T21:19:41.822Z",
+    "command": "ir persiana",
+    "intent": "UNKNOWN",
+    "module": "general",
+    "status": "success",
+    "response": "Comando Serial: null"
+  },
+  {
+    "id": "m48b245",
+    "timestamp": "2026-05-29T21:18:01.566Z",
+    "command": "cocina",
+    "intent": "ENCENDER_LUZ_COCINA",
+    "module": "cocina",
+    "status": "success",
+    "response": "Comando Serial: cocina"
+  },
+  {
+    "id": "k50fwal",
+    "timestamp": "2026-05-29T21:17:52.093Z",
+    "command": "nevera",
+    "intent": "ENCENDER_NEVERA",
+    "module": "cocina",
+    "status": "success",
+    "response": "Comando Serial: nevera"
+  },
+  {
+    "id": "zz4v6u1",
+    "timestamp": "2026-05-29T21:17:43.639Z",
+    "command": "[CRÍTICO] ¡Incendio detectado en la cocina!",
+    "intent": "FIRE_ALERT",
+    "module": "cocina",
+    "status": "danger",
+    "response": "BUZZER_PARPADEO_ON"
+  },
+  {
+    "id": "thmq3sk",
+    "timestamp": "2026-05-29T21:17:39.626Z",
+    "command": "[ALERTA] ¡Fuga de gas detectada!: 806 ppm",
+    "intent": "GAS_ALERT",
+    "module": "cocina",
+    "status": "danger",
+    "response": "BUZZER_ON"
+  },
+  {
+    "id": "f418iqn",
+    "timestamp": "2026-05-29T21:04:56.869Z",
+    "command": " abrir persiana",
+    "intent": "ABRIR_PERSIANA",
+    "module": "habitacion",
+    "status": "success",
+    "response": "Comando Serial: ABRIR_PERSIANA"
+  },
+  {
+    "id": "sm1e4d3",
+    "timestamp": "2026-05-29T21:04:50.064Z",
+    "command": " abrir persiana",
+    "intent": "ABRIR_PERSIANA",
+    "module": "habitacion",
+    "status": "success",
+    "response": "Comando Serial: ABRIR_PERSIANA"
+  },
+  {
+    "id": "tpwaota",
+    "timestamp": "2026-05-29T21:04:38.860Z",
+    "command": " abrir persiana",
+    "intent": "ABRIR_PERSIANA",
+    "module": "habitacion",
+    "status": "success",
+    "response": "Comando Serial: ABRIR_PERSIANA"
+  },
+  {
+    "id": "gc9hl5b",
+    "timestamp": "2026-05-29T21:04:33.564Z",
+    "command": " subir persiana",
+    "intent": "ABRIR_PERSIANA",
+    "module": "habitacion",
+    "status": "success",
+    "response": "Comando Serial: ABRIR_PERSIANA"
+  },
+  {
+    "id": "bxrci8j",
+    "timestamp": "2026-05-29T21:04:24.871Z",
+    "command": "bajar persiana",
+    "intent": "CERRAR_PERSIANA",
+    "module": "habitacion",
+    "status": "success",
+    "response": "Comando Serial: CERRAR_PERSIANA"
+  },
+  {
+    "id": "nj3efe7",
+    "timestamp": "2026-05-29T20:59:29.338Z",
+    "command": "[CLICK] lights -> false",
+    "intent": "Manual: lights_false",
+    "module": "cocina",
+    "status": "success",
+    "response": "Comando Serial: off"
+  },
+  {
+    "id": "dp2d9pw",
+    "timestamp": "2026-05-29T20:59:27.967Z",
+    "command": "[CLICK] lights -> true",
+    "intent": "Manual: lights_true",
+    "module": "cocina",
+    "status": "success",
+    "response": "Comando Serial: cocina"
+  },
+  {
+    "id": "r5dsv6a",
+    "timestamp": "2026-05-29T20:59:27.613Z",
+    "command": "[CLICK] lights -> false",
+    "intent": "Manual: lights_false",
+    "module": "cocina",
+    "status": "success",
+    "response": "Comando Serial: off"
+  },
+  {
+    "id": "2yw1eqh",
+    "timestamp": "2026-05-29T20:59:25.055Z",
+    "command": "[CLICK] lights -> true",
+    "intent": "Manual: lights_true",
+    "module": "cocina",
+    "status": "success",
+    "response": "Comando Serial: cocina"
+  },
+  {
+    "id": "5n4as5q",
+    "timestamp": "2026-05-29T20:59:20.695Z",
+    "command": "[CRÍTICO] ¡Incendio detectado en la cocina!",
+    "intent": "FIRE_ALERT",
+    "module": "cocina",
+    "status": "danger",
+    "response": "BUZZER_PARPADEO_ON"
+  },
+  {
+    "id": "xjb7lst",
+    "timestamp": "2026-05-29T20:59:14.681Z",
+    "command": "[ALERTA] ¡Fuga de gas detectada!: 787 ppm",
+    "intent": "GAS_ALERT",
+    "module": "cocina",
+    "status": "danger",
+    "response": "BUZZER_ON"
+  },
+  {
+    "id": "n2ztizm",
+    "timestamp": "2026-05-29T20:57:56.104Z",
+    "command": " cerrar persiana",
+    "intent": "CERRAR_PERSIANA",
+    "module": "habitacion",
+    "status": "success",
+    "response": "Comando Serial: CERRAR_PERSIANA"
+  },
+  {
+    "id": "g5a3msl",
+    "timestamp": "2026-05-29T20:57:49.691Z",
+    "command": " abrir persiana",
+    "intent": "ABRIR_PERSIANA",
+    "module": "habitacion",
+    "status": "success",
+    "response": "Comando Serial: ABRIR_PERSIANA"
+  },
+  {
+    "id": "wkzz451",
+    "timestamp": "2026-05-29T20:57:44.198Z",
+    "command": "persiana",
+    "intent": "UNKNOWN",
+    "module": "general",
+    "status": "success",
+    "response": "Comando Serial: null"
+  },
+  {
+    "id": "d8ou9y3",
+    "timestamp": "2026-05-29T20:40:19.075Z",
+    "command": "Apagar todo",
+    "intent": "APAGAR_TODO",
+    "module": "global",
+    "status": "success",
+    "response": "Comando Serial: ALL_OFF"
+  },
+  {
+    "id": "74a4wbt",
+    "timestamp": "2026-05-29T20:40:11.517Z",
+    "command": " luz",
+    "intent": "UNKNOWN",
+    "module": "general",
+    "status": "success",
+    "response": "Comando Serial: null"
+  },
+  {
+    "id": "006ckga",
+    "timestamp": "2026-05-29T20:40:04.207Z",
+    "command": " estufa",
+    "intent": "ENCENDER_ESTUFA",
+    "module": "cocina",
+    "status": "success",
+    "response": "Comando Serial: estufa"
+  },
+  {
+    "id": "cj0yaoy",
+    "timestamp": "2026-05-29T20:39:58.407Z",
+    "command": "nevera",
+    "intent": "ENCENDER_NEVERA",
+    "module": "cocina",
+    "status": "success",
+    "response": "Comando Serial: nevera"
+  },
+  {
+    "id": "tu3fm39",
+    "timestamp": "2026-05-29T20:39:50.020Z",
+    "command": "[CLICK] lights -> false",
+    "intent": "Manual: lights_false",
+    "module": "cocina",
+    "status": "success",
+    "response": "Comando Serial: off"
+  },
+  {
+    "id": "kyxk4ym",
+    "timestamp": "2026-05-29T20:39:49.305Z",
+    "command": "[CLICK] stove -> false",
+    "intent": "Manual: stove_false",
+    "module": "cocina",
+    "status": "success",
+    "response": "Comando Serial: off"
+  },
+  {
+    "id": "muwrp17",
+    "timestamp": "2026-05-29T20:39:47.172Z",
+    "command": "[CLICK] nevera -> false",
+    "intent": "Manual: nevera_false",
+    "module": "cocina",
+    "status": "success",
+    "response": "Comando Serial: off"
+  },
+  {
+    "id": "4ezc0tt",
+    "timestamp": "2026-05-29T20:39:27.444Z",
+    "command": "[CRÍTICO] ¡Incendio detectado en la cocina!",
+    "intent": "FIRE_ALERT",
+    "module": "cocina",
+    "status": "danger",
+    "response": "BUZZER_PARPADEO_ON"
+  },
+  {
+    "id": "mycdaso",
+    "timestamp": "2026-05-29T20:39:14.242Z",
+    "command": "[CRÍTICO] ¡Incendio detectado en la cocina!",
+    "intent": "FIRE_ALERT",
+    "module": "cocina",
+    "status": "danger",
+    "response": "BUZZER_PARPADEO_ON"
+  },
+  {
+    "id": "kffnn29",
+    "timestamp": "2026-05-29T20:39:12.994Z",
+    "command": "[CRÍTICO] ¡Incendio detectado en la cocina!",
+    "intent": "FIRE_ALERT",
+    "module": "cocina",
+    "status": "danger",
+    "response": "BUZZER_PARPADEO_ON"
+  },
+  {
+    "id": "8tfbzm3",
+    "timestamp": "2026-05-29T20:39:11.596Z",
+    "command": "[CRÍTICO] ¡Incendio detectado en la cocina!",
+    "intent": "FIRE_ALERT",
+    "module": "cocina",
+    "status": "danger",
+    "response": "BUZZER_PARPADEO_ON"
+  },
+  {
+    "id": "iizxh5n",
+    "timestamp": "2026-05-29T20:38:09.466Z",
+    "command": "[AUTO] Portón detectado Abierto por confirmación física",
+    "intent": "GARAJE_OPEN",
+    "module": "garaje",
+    "status": "success",
+    "response": ""
+  },
+  {
+    "id": "9faxuyy",
+    "timestamp": "2026-05-29T20:38:09.465Z",
+    "command": "[AUTO] Radar HC-SR04: 15cm -> Garaje Abierto",
+    "intent": "GARAJE_OPEN",
+    "module": "garaje",
+    "status": "success",
+    "response": "ABRIR"
+  },
+  {
+    "id": "ptx799h",
+    "timestamp": "2026-05-29T20:38:08.464Z",
+    "command": "[AUTO] Portón detectado Cerrado por confirmación física",
+    "intent": "GARAJE_CLOSED",
+    "module": "garaje",
+    "status": "success",
+    "response": ""
+  },
+  {
+    "id": "25hlb8r",
+    "timestamp": "2026-05-29T20:38:08.462Z",
+    "command": "[AUTO] Radar HC-SR04: 4cm -> Garaje Cerrado",
+    "intent": "GARAJE_CLOSED",
+    "module": "garaje",
+    "status": "success",
+    "response": "CERRAR"
+  },
+  {
+    "id": "u0yq2z6",
+    "timestamp": "2026-05-29T20:38:06.966Z",
+    "command": "[AUTO] Portón detectado Abierto por confirmación física",
+    "intent": "GARAJE_OPEN",
+    "module": "garaje",
+    "status": "success",
+    "response": ""
+  },
+  {
+    "id": "b6gh97i",
+    "timestamp": "2026-05-29T20:38:06.964Z",
+    "command": "[AUTO] Radar HC-SR04: 15cm -> Garaje Abierto",
+    "intent": "GARAJE_OPEN",
+    "module": "garaje",
+    "status": "success",
+    "response": "ABRIR"
+  },
+  {
+    "id": "6i0sqr2",
+    "timestamp": "2026-05-29T20:38:05.964Z",
+    "command": "[AUTO] Portón detectado Cerrado por confirmación física",
+    "intent": "GARAJE_CLOSED",
+    "module": "garaje",
+    "status": "success",
+    "response": ""
+  },
+  {
+    "id": "s3aevkp",
+    "timestamp": "2026-05-29T20:38:05.962Z",
+    "command": "[AUTO] Radar HC-SR04: 3cm -> Garaje Cerrado",
+    "intent": "GARAJE_CLOSED",
+    "module": "garaje",
+    "status": "success",
+    "response": "CERRAR"
+  },
+  {
+    "id": "6t0c4hj",
+    "timestamp": "2026-05-29T20:38:02.965Z",
+    "command": "[AUTO] Portón detectado Abierto por confirmación física",
+    "intent": "GARAJE_OPEN",
+    "module": "garaje",
+    "status": "success",
+    "response": ""
+  },
+  {
+    "id": "frf8ues",
+    "timestamp": "2026-05-29T20:38:02.963Z",
+    "command": "[AUTO] Radar HC-SR04: 15cm -> Garaje Abierto",
+    "intent": "GARAJE_OPEN",
+    "module": "garaje",
+    "status": "success",
+    "response": "ABRIR"
+  },
+  {
+    "id": "tshlwvi",
+    "timestamp": "2026-05-29T20:38:01.464Z",
+    "command": "[AUTO] Portón detectado Cerrado por confirmación física",
+    "intent": "GARAJE_CLOSED",
+    "module": "garaje",
+    "status": "success",
+    "response": ""
+  },
+  {
+    "id": "8kspry8",
+    "timestamp": "2026-05-29T20:38:01.462Z",
+    "command": "[AUTO] Radar HC-SR04: 5cm -> Garaje Cerrado",
+    "intent": "GARAJE_CLOSED",
+    "module": "garaje",
+    "status": "success",
+    "response": "CERRAR"
+  },
+  {
+    "id": "b4now19",
+    "timestamp": "2026-05-29T20:37:59.966Z",
+    "command": "[AUTO] Portón detectado Abierto por confirmación física",
+    "intent": "GARAJE_OPEN",
+    "module": "garaje",
+    "status": "success",
+    "response": ""
+  },
+  {
+    "id": "4rnb792",
+    "timestamp": "2026-05-29T20:37:59.964Z",
+    "command": "[AUTO] Radar HC-SR04: 15cm -> Garaje Abierto",
+    "intent": "GARAJE_OPEN",
+    "module": "garaje",
+    "status": "success",
+    "response": "ABRIR"
+  },
+  {
+    "id": "n8g2gm3",
+    "timestamp": "2026-05-29T20:37:57.465Z",
+    "command": "[AUTO] Portón detectado Cerrado por confirmación física",
+    "intent": "GARAJE_CLOSED",
+    "module": "garaje",
+    "status": "success",
+    "response": ""
+  },
+  {
+    "id": "ohe4exs",
+    "timestamp": "2026-05-29T20:37:57.463Z",
+    "command": "[AUTO] Radar HC-SR04: 5cm -> Garaje Cerrado",
+    "intent": "GARAJE_CLOSED",
+    "module": "garaje",
+    "status": "success",
+    "response": "CERRAR"
+  }
+]

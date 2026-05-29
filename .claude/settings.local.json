@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e \"require\\('./server.js'\\)\")",
+      "Bash(npx vite *)",
+      "Bash(curl -s http://localhost:5000/api/health)",
+      "Bash(node server.js)",
+      "Bash(node -c server.js)",
+      "Bash(powershell -Command \"Stop-Process -Id 36064 -Force -ErrorAction SilentlyContinue\")",
+      "PowerShell($p = \\(Get-NetTCPConnection -LocalPort 5000 -State Listen -ErrorAction SilentlyContinue | Select-Object -First 1\\).OwningProcess; if \\($p\\) { Stop-Process -Id $p -Force; \"Detenido proceso $p en puerto 5000\" } else { \"Puerto 5000 ya libre\" })",
+      "PowerShell($out = @\\(\\); foreach \\($c in @\\('python','python3','py'\\)\\) { try { $v = & $c --version 2>&1; $out += \"$c -> $v\" } catch { $out += \"$c -> NO\" } }; $out += \"pip:\"; try { $out += \\(python -m pip --version 2>&1\\) } catch { $out += \"pip NO\" }; $out -join \"`n\")",
+      "PowerShell(py -m pip --version)",
+      "PowerShell(py -m pip install --upgrade pip 2>&1)",
+      "PowerShell(\"---\")"
+    ]
+  }
+}
