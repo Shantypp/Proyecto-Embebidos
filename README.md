@@ -1,194 +1,227 @@
-# 🏠 NEXUS HOME CONTROLLER
+# NEXUS HOME CONTROLLER
 
-### Casa inteligente (domótica) controlada por **voz**, **sensores** y **cámara con IA**
+### Casa Inteligente (Domotica) controlada por voz, sensores y vision artificial
 
-Proyecto de **sistemas embebidos**: una maqueta de casa inteligente donde los
-sensores reales se ven en una página web en tiempo real, se puede controlar todo
-con clics o **hablando por micrófono**, y una cámara con **inteligencia artificial
-(YOLO)** reconoce el carro del garaje.
+Proyecto de sistemas embebidos: una maqueta de casa inteligente donde los sensores reales se visualizan en una pagina web (dashboard) en tiempo real, permitiendo controlar actuadores mediante clics o comandos de voz por microfono, complementado con una camara y un modelo de inteligencia artificial (YOLO) para el reconocimiento del vehiculo en el garaje.
 
 ---
 
-## 📖 ¿Qué hace el proyecto? (explicación sencilla)
+## 1. Descripcion del Proyecto
 
-Imagina una casa de juguete dividida en cuartos: **baño, cocina, habitación, sala
-y garaje**. Cada cuarto tiene cositas reales: luces de colores, una pantalla,
-sensores de temperatura, de gas, de fuego, un sensor de distancia, motores que
-abren puertas y persianas, etc.
+El sistema representa una maqueta habitacional dividida en cinco zonas principales: bano, cocina, habitacion, sala y garaje. Cada zona cuenta con componentes electronicos reales (luces, pantallas, sensores de temperatura, gas, fuego, distancia y servomotores) gestionados por tres placas Arduino Uno que operan en paralelo y estan conectadas por USB a una computadora.
 
-Todo eso lo controlan unas placas **Arduino** conectadas por USB al computador.
-En el computador corre un **servidor** que lee todo el tiempo lo que mandan los
-Arduinos y lo envía a una **página web** (el tablero). Desde ahí ves los datos en
-vivo y controlas la casa con botones o con la voz. Además, una **cámara con IA**
-detecta cuando hay un carro en el garaje.
+Un servidor local centraliza las comunicaciones: lee las tramas de datos recibidas por puerto serial desde los Arduinos y las transmite de manera bidireccional y en tiempo real a una aplicacion web interactiva, permitiendo tanto la monitorizacion como el control manual y por voz.
 
 ```
-  SENSORES Y MOTORES  <-->  ARDUINOS  <-->  SERVIDOR (PC)  <-->  PÁGINA WEB
-                                                  ▲
-                                                  │
-                                        CÁMARA + YOLO (carro)
++--------------------+      +--------------------+      +--------------------+      +--------------------+
+|  Sensores/Actores  | <--> |   Placas Arduino   | <--> |   Servidor Local   | <--> |    Cliente Web     |
+|   (Fisicos/Maqueta)|      |     (Uno x3)       |      |     (Node.js)      |      |   (React Dashboard)|
++--------------------+      +--------------------+      +--------------------+      +--------------------+
+                                                                   ^
+                                                                   |
+                                                        +--------------------+
+                                                        |  Camara + IA/YOLO  |
+                                                        |  (Deteccion Carro) |
+                                                        +--------------------+
 ```
 
 ---
 
-## 🔩 Partes físicas que usamos
+## 2. Componentes de Hardware Utilizados
 
-### Placas y base
-| Componente | Para qué sirve |
-|---|---|
-| 3 × Arduino UNO | El "cerebro" de cada zona de la casa |
-| 3 × Protoboard (una por Arduino) | Armar los circuitos sin soldar |
-| Cables y resistencias | Conectar todo |
+### Placas y Conectividad
+* **Arduino Uno (x3)**: Microcontroladores que actuan como procesadores dedicados para cada zona fisica.
+* **Protoboards (x3)**: Placas de prueba para la interconexion de la electronica sin soldadura.
+* **Cables de conexion y resistencias**: Elementos de cableado y proteccion electrica.
 
-### Motores
-| Componente | Para qué sirve |
-|---|---|
-| Servomotor del **garaje** | Abre y cierra el portón |
-| Servomotor de la **persiana** | Rotación continua; sube/baja la persiana |
+### Actuadores y Motores
+* **Servomotor de Porton (Garaje)**: Motor de rotacion limitada a angulo de 0 a 90 grados para apertura y cierre del porton.
+* **Servomotor de Persiana (Habitacion)**: Motor de rotacion continua de 360 grados, configurado para girar en una direccion u otra por un intervalo de tiempo.
 
-### Luces (LEDs)
-| Componente | Para qué sirve |
-|---|---|
-| LED RGB del **baño** | Cambia de color según el modo (Spa, Mañana, Noche) |
-| LED RGB de la **cocina** | Indica nevera, luz y estufa con colores |
+### Iluminacion (LEDs)
+* **LED RGB del Bano**: Diodo emisor de luz multicolor para indicar los modos Spa (Rojo), Manana (Azul), Noche (Verde) o Apagado.
+* **LED RGB de la Cocina**: Indicador de estado de nevera (Azul), iluminacion general (Verde) o estufa (Cyan).
 
-### Sensores / detectores
-| Componente | Para qué sirve |
-|---|---|
-| Ultrasónico **HC-SR04** | "Radar" del garaje: mide la distancia del carro |
-| **DHT11** | Mide temperatura y humedad |
-| Sensor de **gas (MQ)** | Detecta fugas de gas en la cocina |
-| Sensor de **fuego/llama** | Detecta incendio en la cocina |
+### Sensores y Detectores
+* **Sensor Ultrasonico HC-SR04**: Emisor y receptor de ultrasonido que funciona como radar para medir la distancia del automovil.
+* **Sensor de Clima DHT11**: Sensor digital de temperatura y humedad ambiental.
+* **Sensor de Gas MQ**: Sensor analogico para detectar la concentracion y fugas de gas.
+* **Sensor de Fuego**: Detector digital de flama y radiacion para la prevencion de incendios.
 
-### Pantallas y alarma
-| Componente | Para qué sirve |
-|---|---|
-| Pantallas **OLED SSD1306** (128×64, I2C) | Muestran info en la maqueta |
-| **Buzzer** | Suena ante gas o fuego |
-| **Cámara del iPhone** | "Ojo" para que YOLO reconozca el carro |
+### Interfaces Visuales y Sonoras
+* **Pantallas OLED SSD1306 (128x64, I2C)**: Displays graficos colocados directamente en la maqueta para mostrar estados en vivo.
+* **Buzzer (Zumbador)**: Dispositivo sonoro de alarma activado ante eventos criticos de gas o fuego.
+
+### Entrada de Video (IA)
+* **Camara Movil**: Camara de telefono celular configurada como dispositivo de video IP para alimentar el modelo de vision por computadora.
 
 ---
 
-## 🧩 ¿Cómo están implementados los 3 Arduinos?
+## 3. Distribucion de Módulos (Arduinos)
 
-La casa se reparte en **3 placas Arduino**, cada una con **su propia protoboard**,
-y **las 3 funcionan al mismo tiempo**. Cada una está conectada por su propio cable
-USB (cada Arduino usa un **puerto COM** distinto).
+El sistema distribuye la logica en tres placas fisicas independientes conectadas simultaneamente a la PC mediante puertos COM individuales.
 
-| Arduino | Zona | Componentes |
-|---|---|---|
-| **Arduino 1** | Baño + Garaje | LED RGB + OLED + servo del portón + sensor ultrasónico |
-| **Arduino 2** | Cocina + Habitación | DHT11 + LED RGB + sensor de gas + sensor de fuego + buzzer + servo persiana + OLED |
-| **Arduino 3** | Sala | Aparatos de la sala (TV, piano, mini-juego…) |
+| Placa | Modulo Habitacional | Componentes Electronicos Asociados |
+| :--- | :--- | :--- |
+| **Arduino 1** | Bano y Garaje | LED RGB, Pantalla OLED I2C, Servomotor de Porton, Sensor Ultrasonico HC-SR04 |
+| **Arduino 2** | Cocina y Habitacion | Sensor DHT11, LED RGB (Anodo Comun), Sensor de Gas MQ, Sensor de Fuego, Buzzer, Servomotor de Persiana 360, Pantalla OLED I2C |
+| **Arduino 3** | Sala | Actuadores y emuladores de aparatos multimedia (TV, Piano, Mini-juego) |
 
-**¿Cómo trabajan juntos?**
-- Cada Arduino hace dos cosas a la vez sin trabarse (programación *no bloqueante*):
-  1. Enviar continuamente la info de sus sensores por USB.
-  2. Escuchar las órdenes que llegan desde el computador.
-- Se comunican con el PC por **puerto serial USB a 9600 baudios**, usando mensajes
-  cortos de texto.
-
-**Ejemplos de mensajes** que envía el Arduino:
-```
-DIST:23      → 23 cm en el radar del garaje
-TEMP:25.30   → temperatura 25.3 °C
-HUM:64.80    → humedad 64.8 %
-GAS:120      → nivel de gas
-FIRE:0       → 0 = sin fuego, 1 = fuego
-```
-**Órdenes** que envía el computador:
-```
-SPA / MANANA / NOCHE / OFF          → modos del baño
-ABRIR / CERRAR                      → portón del garaje
-nevera / cocina / estufa            → cocina
-ABRIR_PERSIANA / CERRAR_PERSIANA    → habitación
-```
+### Logica de Ejecucion No Bloqueante
+Para evitar congelamientos y retardos en el procesamiento, los programas de los Arduinos estan disenados de forma no bloqueante (utilizando `millis()` en lugar de `delay()` para los sensores). Esto les permite ejecutar dos flujos simultaneamente:
+1. Envio periodico de datos seriales con las lecturas de los sensores al servidor.
+2. Escucha constante de comandos seriales entrantes para activar dispositivos de forma inmediata.
 
 ---
 
-## 🧠 El cerebro central: el servidor
+## 4. Protocolo de Comunicacion Serial
 
-Un programa en **Node.js** que hace de puente entre los Arduinos y la web:
-- Lee los puertos COM de los 3 Arduinos al mismo tiempo.
-- Interpreta los mensajes y arma el "estado de la casa".
-- Guarda el estado y un historial de eventos en archivos **JSON**.
-- Envía todo a la web **en tiempo real** y reenvía las órdenes al Arduino correcto.
+La comunicacion se realiza por puerto serie USB configurado a una velocidad de **9600 baudios**.
 
----
+### Tramas enviadas desde los Arduinos al Servidor
+* `DIST:X` (Distancia medida en centimetros por el radar del garaje)
+* `TEMP:X.XX` (Temperatura medida en grados Celsius)
+* `HUM:X.XX` (Porcentaje de humedad relativa)
+* `GAS:X` (Lectura analogica del sensor de gas MQ)
+* `FIRE:X` (Lectura digital del sensor de fuego: 0 si esta seguro, 1 si hay fuego)
 
-## 🖥️ La página web (dashboard) y 🎙️ la voz y 🤖 la cámara
-
-- **Dashboard:** tarjetas por cuarto, sensores en vivo, consola de voz, historial
-  y estado de los puertos.
-- **Voz:** haces clic en el orbe, hablas, la casa ejecuta y te responde hablando.
-  Usa la **Web Speech API** del navegador, en español.
-- **Cámara IA (YOLO):** la cámara del celular detecta el carro y dibuja un recuadro;
-  el video y el aviso "carro detectado" se ven en el tablero.
-  *(En esta versión la cámara solo detecta e informa; no mueve el motor del garaje.)*
+### Comandos enviados desde el Servidor a los Arduinos
+* **Bano**: `SPA`, `MANANA`, `NOCHE`, `OFF` (Configuracion de modos e iluminacion)
+* **Garaje**: `ABRIR`, `CERRAR` (Control del porton del garaje)
+* **Cocina**: `nevera`, `cocina`, `estufa`, `off` (Control de iluminacion e indicadores RGB de cocina)
+* **Habitacion**: `ABRIR_PERSIANA`, `CERRAR_PERSIANA` (Apertura y cierre temporizado de persianas)
 
 ---
 
-## 🛠️ Tecnologías usadas
+## 5. Arquitectura del Servidor Local (Backend)
 
-| Área | Tecnologías |
-|---|---|
-| **Hardware** | Arduino UNO ×3, protoboards, servomotores, LEDs RGB, HC-SR04, DHT11, sensor de gas (MQ), sensor de fuego, buzzer, OLED SSD1306 |
-| **Arduinos** | C/C++ (Arduino IDE) · librerías `Servo`, `Adafruit_SSD1306`, `Adafruit_GFX`, `DHT`, `Wire` |
-| **Servidor** | Node.js · Express · Socket.IO · serialport · almacenamiento JSON |
-| **Página web** | React · Vite · TailwindCSS · Framer Motion · lucide-react · Socket.IO (cliente) |
-| **Voz** | Web Speech API (reconocimiento + síntesis de voz), en español |
-| **IA / Cámara** | Python · YOLOv8 (Ultralytics) · OpenCV · Flask · python-socketio |
+Construido en Node.js, actua como el nucleo logico de la instalacion:
+* **Conexion de Puertos COM**: Abre y monitorea los flujos seriales de las placas de forma paralela.
+* **Parser de Datos**: Traduce las tramas de texto de los Arduinos en un estado JavaScript consolidado.
+* **Persistencia local**: Almacena el ultimo estado conocido y un registro de eventos recientes en archivos estructurados JSON (`db_state.json` y `db_logs.json`).
+* **Comunicacion por Sockets**: Distribuye de forma instantanea las actualizaciones a todos los clientes web conectados utilizando WebSockets y gestiona comandos procedentes del navegador.
+
+### Tecnologias Backend
+* **Node.js** y **Express** como entorno y enrutador base.
+* **Socket.IO** para el flujo bidireccional de datos en tiempo real.
+* **serialport** para la interaccion nativa con los puertos serie USB.
 
 ---
 
-## ▶️ Cómo ejecutar el proyecto
+## 6. Interfaz Web (Frontend)
 
-**1. Subir los programas a los Arduinos** (desde el Arduino IDE):
-- `arduinos/Arduino1_Bano_Garaje/Arduino1_Bano_Garaje.ino`
-- `arduinos/Arduino2_Cocina_Habitacion/Arduino2_Cocina_Habitacion.ino`
-- El programa de la sala (Arduino 3).
+El dashboard web permite visualizar de forma dinamica el estado de la vivienda:
+* **Visualizacion en vivo**: Muestra graficas de radar para la distancia del auto, niveles de gas y fuego, pantallas OLED y datos de clima.
+* **Control Manual**: Botones interactivos que envian comandos directos a los actuadores.
+* **Logs del sistema**: Consola en tiempo real de los comandos ejecutados y el trafico de datos RX/TX.
 
-**2. Encender el servidor:**
+### Tecnologias Frontend
+* **React** como biblioteca para la construccion de componentes reutilizables.
+* **Vite** para la compilacion y ejecucion optimizada de desarrollo.
+* **TailwindCSS** para el diseno responsive y la estetica visual oscura.
+* **Framer Motion** para animaciones fluidas e interactivas.
+* **Lucide React** para la iconografia.
+
+---
+
+## 7. Asistente de Voz Integrado
+
+El sistema incorpora un control de voz que procesa peticiones en espanol utilizando el motor de audio nativo del navegador (Web Speech API).
+
+### Flujo de Ejecucion
+1. El usuario activa la escucha presionando el control central en la pantalla.
+2. `SpeechRecognition` convierte el audio en texto plano.
+3. Un comparador linguistico mapea el texto con intenciones del sistema.
+4. Se ejecuta el comando correspondiente via WebSocket.
+5. El sistema responde con voz sintetica utilizando `SpeechSynthesis` en espanol (es-CO).
+
+### Comandos de Voz Admitidos
+* **Bano**: "activar modo spa", "activar modo mañana", "activar modo noche", "apagar baño".
+* **Cocina**: "encender nevera", "encender luz cocina", "encender estufa".
+* **Habitacion**: "subir persiana", "bajar persiana".
+* **Garaje**: "abrir garaje", "cerrar garaje".
+* **Apagado General**: "apagar" o "apagar todo" (Desactiva todas las luces y sistemas de la casa).
+
+---
+
+## 8. Deteccion de Vehiculo con Vision Artificial (YOLO)
+
+El garaje inteligente cuenta con una camara IP que alimenta un script de Python encargado del procesamiento de imagenes.
+
+### Caracteristicas
+* **Modelo de IA**: Utiliza YOLOv8 (You Only Look Once) entrenado para el reconocimiento de automoviles.
+* **Procesamiento**: OpenCV recibe el stream de video de la camara, aplica la red neuronal, dibuja los recuadros de deteccion y transmite el video optimizado al dashboard.
+* **Sincronizacion**: Emite una senal de socket ("carro detectado / no detectado") al servidor de Node.js para actualizar graficamente el panel web.
+
+> [!NOTE]
+> En la version actual, la deteccion por camara tiene fines puramente informativos y de visualizacion; el control automatico del porton sigue dependiendo del sensor ultrasonico del Arduino.
+
+### Tecnologias de IA
+* **Python**
+* **YOLOv8 (Ultralytics)**
+* **OpenCV**
+* **Flask** (para la transmision HTTP de video)
+* **python-socketio** (para integracion de sockets con Node.js)
+
+---
+
+## 9. Guia de Ejecucion del Proyecto
+
+Sigue estos pasos en orden para arrancar el sistema completo:
+
+### Paso 1: Cargar codigos de Arduino
+Abre tu Arduino IDE y sube el codigo correspondiente a cada placa:
+* **Arduino 1**: `arduinos/Arduino1_Bano_Garaje/Arduino1_Bano_Garaje.ino`
+* **Arduino 2**: `arduinos/Arduino2_Cocina_Habitacion/Arduino2_Cocina_Habitacion.ino`
+* **Arduino 3**: Carga el programa dedicado de la sala.
+
+### Paso 2: Ejecutar el Servidor Backend
+Abre una terminal en la raiz y ejecuta:
 ```bash
 cd server
-npm install      # solo la primera vez
+npm install
 node server.js
 ```
+El servidor estara escuchando en `http://localhost:5000`.
 
-**3. Encender la página web:**
+### Paso 3: Ejecutar el Panel Web
+Abre una nueva terminal y ejecuta:
 ```bash
 cd client
-npm install      # solo la primera vez
-npm run dev      # abre la dirección que muestre, p. ej. http://localhost:5173
+npm install
+npm run dev
 ```
+Abre en tu navegador la direccion indicada (usualmente `http://localhost:5173`). Desde el panel "Hardware Conector", haz clic en conectar en los puertos COM de cada Arduino.
 
-**4. Conectar los Arduinos** en el tablero (panel *Hardware Conector*), cada uno a
-su puerto COM.
-> ⚠️ El Monitor Serie del Arduino IDE y el tablero **no pueden usar el mismo puerto
-> al mismo tiempo**.
+> [!WARNING]
+> No dejes abierto el Monitor Serie de Arduino IDE al conectar los puertos en la web, ya que el puerto serie solo admite una aplicacion conectada a la vez.
 
-**5. (Opcional) Detección del carro con la cámara:**
+### Paso 4: Ejecutar la Deteccion YOLO (Opcional)
+Abre una tercera terminal y ejecuta:
 ```bash
 cd yolo
-py -m pip install -r requirements.txt   # solo la primera vez
-py yolo_garage.py
+python -m pip install -r requirements.txt
+python yolo_garage.py
 ```
-> Más detalles en [`yolo/README.md`](yolo/README.md).
+*Para conectar la camara del telefono, utiliza herramientas como Iriun Webcam o streams RTSP, ajustando la URL del video en `yolo_garage.py`.*
 
 ---
 
-## 📁 Estructura del proyecto
+## 10. Estructura de Directorios
 
 ```
 Proyecto-Embebidos/
-├── arduinos/   → programas (.ino) de cada Arduino
-├── server/     → servidor Node.js (lee los Arduinos y habla con la web)
-├── client/     → página web (dashboard) en React
-├── yolo/       → detección del carro con YOLO (Python) + README
-├── README.md           → este archivo
-└── DOCUMENTACION.txt    → la misma explicación en texto plano
+├── arduinos/                # Archivos de codigo (.ino) para placas Arduino
+│   ├── Arduino1_Bano_Garaje/
+│   ├── Arduino2_Cocina_Habitacion/
+│   └── ...
+├── server/                  # Codigo backend (Node.js, Express, Sockets, Serial)
+├── client/                  # Codigo frontend de la aplicacion (React, Vite, CSS)
+├── yolo/                    # Script de vision artificial YOLO (Python) y camara
+├── README.md                # Descripcion general estructurada (este archivo)
+└── DOCUMENTACION.txt        # Documentacion original en texto plano
 ```
 
 ---
 
-<p align="center">Proyecto académico de domótica · Sistemas Embebidos</p>
+<p align="center">Proyecto academico de domotica - Sistemas Embebidos</p>
